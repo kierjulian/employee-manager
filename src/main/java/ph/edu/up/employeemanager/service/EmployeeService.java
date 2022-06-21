@@ -5,12 +5,14 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ph.edu.up.employeemanager.exception.UserNotFoundException;
 import ph.edu.up.employeemanager.model.Employee;
 import ph.edu.up.employeemanager.repository.EmployeeRepository;
 
 @Service
+@Transactional
 public class EmployeeService {
 	
 	private final EmployeeRepository employeeRepository;
